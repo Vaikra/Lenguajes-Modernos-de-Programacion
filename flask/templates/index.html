@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+</head>
+<body>
+    <h1>Lista de Usuarios</h1>
+    <ul>
+        {% for usuario in usuarios %}
+        <li>{{ usuario[1] }} {{ usuario[2] }}</li> <!-- usuario[1] es nombre, usuario[2] es apellido -->
+        {% endfor %}
+    </ul>
+
+    <h2>Agregar Usuario</h2>
+    <form action="/add" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" required><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" required><br>
+
+        <button type="submit">Agregar</button>
+    </form>
+</body>
+</html>
