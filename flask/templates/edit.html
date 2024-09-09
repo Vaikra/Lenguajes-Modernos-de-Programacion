@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Usuario</title>
+</head>
+<body>
+    <h1>Editar Usuario</h1>
+    <form action="{{ url_for('edit_usuario', id=usuario[0]) }}" method="POST">
+        Nombre: <input type="text" name="nombre" value="{{ usuario[1] }}" required>
+        Apellido: <input type="text" name="apellido" value="{{ usuario[2] }}" required>
+        <button type="submit">Actualizar Usuario</button>
+    </form>
+    <a href="{{ url_for('index') }}">Volver</a>
+</body>
+</html>
